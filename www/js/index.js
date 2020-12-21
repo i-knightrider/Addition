@@ -22,15 +22,15 @@
 document.addEventListener('deviceready', onDeviceReady, false);
 
 function myFunction() {
-        var one = parseInt(document.getElementById("first").value);
-        var two = parseInt(document.getElementById("second").value);
-        var sum = 0;
-        sum = one + two;
-        document.getElementById('data').innerHTML=sum;
+    //Note:- To use the myFunction() method, i had to change 'unsafe-eval' to 'unsafe-inline' in meta tag!
+    var one = document.getElementById('first').value;
+    var two = document.getElementById('second').value;
+    var sum = 0;
+    sum = Number(one) + Number(two); 
+    document.getElementById('data').innerHTML=sum;
     }
 function onDeviceReady() {
     // Cordova is now initialized. Have fun!
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
-    document.getElementById('deviceready').classList.add('ready');
-    
+    document.getElementById('deviceready').classList.add('ready'); 
 }

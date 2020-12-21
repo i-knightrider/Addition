@@ -20,7 +20,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <!--Note:- To use the myFunction() method, i had to change 'unsafe-eval' to 'unsafe-inline' in meta tag!-->
+
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -39,7 +41,7 @@
         <div id="div">
                 <input type="number" id="first"/><br>
                 <input type="number" id="second"/><br>
-                <button onclick="myFunction()">Add</button>
+                <button onclick="myFunction();">Add</button>
                 <p id="data"></p> 
         </div>
         <script src="cordova.js"></script>
