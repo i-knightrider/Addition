@@ -21,7 +21,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <!--Note:- To use the myFunction() method, i had to change 'unsafe-eval' to 'unsafe-inline' in meta tag!-->
+        <!--Note:- To use the myFunction() method, i had to change 'unsafe-eval' to 'unsafe-inline' in meta tag!
+        We can also use the event listener method in js file to avoid this problem!-->
 
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
@@ -41,7 +42,10 @@
         <div id="div">
                 <input type="number" id="first"/><br>
                 <input type="number" id="second"/><br>
-                <button onclick="myFunction();">Add</button>
+                <!--<button onclick="myFunction();">Add</button>
+                    This is inline function to use this, i had to change 'unsafe-eval' to 'unsafe-inline' in meta tag in Content
+                    Security Policy! To avoid this, we will use:-->
+                <button id="addButton">Add</button>
                 <p id="data"></p> 
         </div>
         <script src="cordova.js"></script>
